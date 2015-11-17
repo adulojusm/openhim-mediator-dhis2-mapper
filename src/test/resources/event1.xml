@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<event program="program1" orgUnit="orgUnit1" eventDate="2015-11-10" storedBy="openhim">
+    <dataValues>
+        <dataValue dataElement="dataElement1" value="999"/>
+        <dataValue dataElement="dataElement2" value="999"/>
+        <dataValue dataElement="dataElement3" value="999"/>
+    </dataValues>
+</event>

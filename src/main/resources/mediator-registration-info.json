@@ -1,0 +1,57 @@
+{
+  "urn": "urn:mediator:dhis2-mapper",
+  "version": "0.1.0",
+  "name": "DHIS2 Mapper",
+  "description": "Provides id mapping for DHIS2 data formats",
+  "endpoints": [
+    {
+      "name": "DHIS2 Mapper Route",
+      "host": "localhost",
+      "port": "8600",
+      "type": "http"
+    }
+  ],
+  "configDefs": [
+    {
+      "param": "target-scheme",
+      "displayName": "Target Server Scheme",
+      "type": "option",
+      "values": ["http", "https"]
+    },
+    {
+      "param": "target-host",
+      "displayName": "Target Server Host",
+      "type": "string"
+    },
+    {
+      "param": "target-port",
+      "displayName": "Target Server Port",
+      "type": "number"
+    },
+    {
+      "param": "mappings-datasets",
+      "displayName": "Data Set Mappings",
+      "type": "map"
+    },
+    {
+      "param": "mappings-dataelements",
+      "displayName": "Data Element Mappings",
+      "type": "map"
+    },
+    {
+      "param": "mappings-orgunits",
+      "displayName": "OrgUnit Mappings",
+      "type": "map"
+    },
+    {
+      "param": "mappings-programs",
+      "displayName": "Program Mappings",
+      "type": "map"
+    }
+  ],
+  "config": {
+    "target-scheme": "http",
+    "target-host": "localhost",
+    "target-port": 8080
+  }
+}
