@@ -4,7 +4,7 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
  */
 
-package org.openhim.mediator.enrichers;
+package ng.mirabilia.carphadhis2mediator.converter;
 
 import org.apache.commons.io.IOUtils;
 import org.custommonkey.xmlunit.XMLTestCase;
@@ -14,16 +14,16 @@ import java.io.InputStream;
 
 /**
  */
-public class IdentityEnricherTest extends XMLTestCase {
+public class DataExchangerTest extends XMLTestCase {
 
     @Test
     public void testEnrich() throws Exception {
         InputStream dvs1in = getClass().getClassLoader().getResourceAsStream("dataValueSet1.xml");
         String dvs1 = IOUtils.toString(dvs1in);
 
-        IdentityEnricher enricher = new IdentityEnricher();
+        DataExchanger enricher = new DataExchanger();
 
-        String result = enricher.enrich(dvs1);
+        String result = enricher.dataProcess(dvs1);
         assertXMLEqual("XML input should equal output", dvs1, result);
     }
 }

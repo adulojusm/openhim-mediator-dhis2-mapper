@@ -1,8 +1,8 @@
 {
-  "urn": "urn:mediator:dhis2-mapper",
+  "urn": "urn:mediator:dhis2-to-dhis2-mapper-development",
   "version": "0.1.0",
-  "name": "DHIS2 Mapper",
-  "description": "Provides id mapping for DHIS2 data formats",
+  "name": "CARPHA CMS DHS to DHIS2 Mapper Development",
+  "description": "This Mediator convert data from CMS DHIS2 to CARPHA RIPHSS",
   "endpoints": [
     {
       "name": "DHIS2 Mapper Route",

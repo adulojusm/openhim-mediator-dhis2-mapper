@@ -4,7 +4,7 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
  */
 
-package org.openhim.mediator;
+package ng.mirabilia.carphadhis2mediator;
 
 import akka.actor.ActorRef;
 import akka.actor.ActorSystem;
@@ -18,7 +18,7 @@ import org.openhim.mediator.engine.messages.MediatorHTTPRequest;
 
 import static org.junit.Assert.*;
 
-public class DHISMappingAdapterTest {
+public class DHIS2DHISAdapterTest {
 
     static ActorSystem system;
 
@@ -46,7 +46,7 @@ public class DHISMappingAdapterTest {
     public void testMediatorHTTPRequest() throws Exception {
         new JavaTestKit(system) {{
             final MediatorConfig testConfig = new MediatorConfig("mediator-dhis2-mapper", "localhost", 8600);
-            final ActorRef defaultOrchestrator = system.actorOf(Props.create(DHISMappingAdapter.class, testConfig));
+            final ActorRef defaultOrchestrator = system.actorOf(Props.create(DHIS2DHISAdapter.class, testConfig));
 
             MediatorHTTPRequest POST_Request = new MediatorHTTPRequest(
                     getRef(),
