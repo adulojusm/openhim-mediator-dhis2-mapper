@@ -4,7 +4,7 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
  */
 
-package org.openhim.mediator;
+package ng.mirabilia.carphadhis2mediator;
 
 import akka.actor.ActorSystem;
 import akka.event.Logging;
@@ -22,7 +22,7 @@ public class MediatorMain {
     private static RoutingTable buildRoutingTable() throws RoutingTable.RouteAlreadyMappedException {
         RoutingTable routingTable = new RoutingTable();
 
-        routingTable.addRegexRoute(".*", DHISMappingAdapter.class);
+        routingTable.addRegexRoute(".*", DHIS2DHISAdapter.class);
 
         return routingTable;
     }

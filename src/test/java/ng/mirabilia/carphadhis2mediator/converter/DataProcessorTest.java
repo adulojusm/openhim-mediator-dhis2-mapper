@@ -4,7 +4,7 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
  */
 
-package org.openhim.mediator.enrichers;
+package ng.mirabilia.carphadhis2mediator.converter;
 
 import org.apache.commons.io.IOUtils;
 import org.custommonkey.xmlunit.XMLTestCase;
@@ -16,7 +16,7 @@ import java.util.Map;
 
 /**
  */
-public class DXFEnricherTest extends XMLTestCase {
+public class DataProcessorTest extends XMLTestCase {
 
     static Map<String, String> dataSetsMap;
     static Map<String, String> dataElementsMap;
@@ -43,8 +43,8 @@ public class DXFEnricherTest extends XMLTestCase {
         InputStream dvs1EnrichedIn = getClass().getClassLoader().getResourceAsStream("dataValueSet1_enriched.xml");
         String dvs1Enriched = IOUtils.toString(dvs1EnrichedIn);
 
-        DXFEnricher enricher = new DXFEnricher(dataSetsMap, dataElementsMap, orgUnitsMap, programsMap);
-        String result = enricher.enrich(dvs1);
+        DataProcessor enricher = new DataProcessor(dataSetsMap, dataElementsMap, orgUnitsMap, programsMap);
+        String result = enricher.dataProcess(dvs1);
 
         assertXMLEqual(dvs1Enriched, result);
     }
@@ -56,8 +56,8 @@ public class DXFEnricherTest extends XMLTestCase {
         InputStream ev1EnrichedIn = getClass().getClassLoader().getResourceAsStream("event1_enriched.xml");
         String ev1Enriched = IOUtils.toString(ev1EnrichedIn);
 
-        DXFEnricher enricher = new DXFEnricher(dataSetsMap, dataElementsMap, orgUnitsMap, programsMap);
-        String result = enricher.enrich(ev1);
+        DataProcessor enricher = new DataProcessor(dataSetsMap, dataElementsMap, orgUnitsMap, programsMap);
+        String result = enricher.dataProcess(ev1);
 
         assertXMLEqual(ev1Enriched, result);
     }
